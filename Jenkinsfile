@@ -53,7 +53,7 @@ node {
     stage('Scan K8s yaml manifest with Bridgecrew') {  
 	withDockerContainer(image: 'kennethreitz/pipenv:latest', args: '-u root --privileged -v /var/run/docker.sock:/var/run/docker.sock' ) {
 		withCredentials([string(credentialsId: 'PCCS_API', variable: 'PCCS_API')]) { 
-			//sh "/run.sh $BC_API https://github.com/pasqua1e/shiftleft_demo-build/"
+			//sh "/run.sh $BC_API https://github.com/scottorton/jenkins-attack/"
 			//sh "/run.sh $BC_API ."
 			script { 
                     		sh """export PRISMA_API_URL=https://api.eu.prismacloud.io
