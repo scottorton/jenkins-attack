@@ -56,7 +56,7 @@ node {
 			//sh "/run.sh $BC_API https://github.com/pasqua1e/shiftleft_demo-build/"
 			//sh "/run.sh $BC_API ."
 			script { 
-                    		sh """export PRISMA_API_URL=https://api.prismacloud.io
+                    		sh """export PRISMA_API_URL=https://api.eu.prismacloud.io
                     		pipenv install
                     		pipenv run pip install bridgecrew
                     		pipenv run bridgecrew -s --directory . --bc-api-key $PCCS_API --repo-id jenkins/$BUILD_TAG"""
